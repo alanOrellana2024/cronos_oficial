@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.my-first-btn {
+  background-color: #a93226; /* Cambia el color del boton */
+  color: #fbfcfc ; /* Cambia el color del texto del boton*/
+}
+
+.my-first-btn:hover {
+  background-color: #920202; /* Efecto de cambio de color del boton al pasar el cursor por encima*/
+}
+
