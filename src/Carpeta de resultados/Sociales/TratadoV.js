@@ -1,29 +1,29 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import imagen from './'
+import Imagenes from '././Imagenes'
 
 const Versalle = () => {
     return (
-        <div style={{backgroundColor: 'white', padding: '20px', height: ''}}>
+        <div style={{backgroundColor: 'white', padding: '20px', height: '100vh'}}>
             <div className='container'>
                   
-                <div className="d-flex justify-content-between alingn-items-center">
+                <div className="d-flex justify-content-between align-items-center">
                 <div className="input-group mb-3" style={{ maxWidth: '300px' }}>
                     <input
                     type='text'
                     className='form-control'
                     placeholder='Buscar'
-                    arial-label="Buscas"
+                    aria-label="Buscas"
                     />
                         <div>
                          <span className="text-muted">Texto Alineado a la Derecha</span>
                          </div>
                              <h2 className="mt-3">Título del Evento </h2>
                             <div className='row mt-4'>
-                            <P>
+                            <p>
                             El Tratado de Versalles, firmado el 28 de junio de 1919, puso fin oficialmente a la Primera Guerra Mundial y fue diseñado para evitar futuros conflictos debilitando a Alemania. Este tratado fue elaborado por las fuerzas aliadas, lideradas por David Lloyd George (Gran Bretaña), Georges Clemenceau (Francia), Woodrow Wilson (EE. UU.) y Vittorio Orlando (Italia), sin la participación de Alemania.
                             
-                            </P>
+                            </p>
                             <p>
                             Entre los términos clave, Alemania debía:
                                 •	Desmilitarizarse.
@@ -38,7 +38,7 @@ const Versalle = () => {
                             </div>
                                 <div className='col-md-4'>
                                     <img
-                                    
+                                    src=''
                                     />
                                     <img
                                     
