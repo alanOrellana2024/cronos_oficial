@@ -33,13 +33,13 @@ const VersalleContent = () => {
                             </p>
                             <p>
                             Recuerda que esta es una información abreviada del evento que has seleccionado. Si deseas información más extensa puedes visitar el siguiente link:
-                            <a href='https://beta.nationalarchives.gov.uk/explore-the-collection/stories/the-treaty-of-versailles/' target='_blank' rel='noopener noreferrer'/>
+                            <a href='https://beta.nationalarchives.gov.uk/explore-the-collection/stories/the-treaty-of-versailles/' target='_blank' rel='noopener noreferrer'>LINK</a>
                             </p>
                             </div>
                                 <div className='col-md-4'>                                    
-                                    <img
-                                    src=''
-                                    />
+                                  
+                                <img src={Imagenes.Acta_de_TV} alt="Acta del Tratado de Versalles" />
+                                <img src={Imagenes.Reunion_de_TV} alt="Reunión para el Tratado de Versalles" />
 
                                 </div>
 _
