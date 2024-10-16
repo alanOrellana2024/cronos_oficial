@@ -1,7 +1,6 @@
 import VersalleContent from "./TratadoV";
-import {Imagenes} from "../../Imagenes"
 
-export default function Versalle() {
+export default function VersallleContect() {
     return(
         <div className="TratadoV">
             <VersalleContent/>
