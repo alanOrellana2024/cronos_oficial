@@ -9,10 +9,12 @@ function App() {
       
         <button type="button" class="btn my-first-btn btn-lg" onclick="window.location.href=''">Empezar</button>
 
-
       </header>
     </div>
   );
 }
+
+
+
 
 export default App;
