@@ -42,3 +42,15 @@
   background-color: #920202; /* Efecto de cambio de color del boton al pasar el cursor por encima*/
 }
 
+.App-header {
+  background-image: url('../public/background_Cronos.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
