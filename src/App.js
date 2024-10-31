@@ -1,10 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Login } from "./Login/login";
 
 
- 
 function App() {
   return (
     <div className="App">
