@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import PantallaPrincipal from './PantallaPrincipal/pantallaPrincipal';
+import './App.css';
 
+function Start() {
+    const navigate = useNavigate();
 
-function App() {
-  return (
-    <div className="App">
-      
+return (
+  <div className="App">
       <header className="App-header">
-    
-        <img src={`${process.env.PUBLIC_URL}/logo CRONOS2.2.2.00.png`} className="App-logo" alt="logo" />
-      
-        <button type="button" class="btn my-first-btn btn-lg" onclick="window.location.href=''">Empezar</button>
+
+          <img src={`${process.env.PUBLIC_URL}/logo CRONOS2.2.2.00.png`} className="App-logo" alt="Logo Oficial" />
+
+          <button type="button"   className="btn my-first-btn btn-lg" onClick={() => navigate('/principal')}> Empezar </button>
 
       </header>
-    </div>
-  );
+
+   </div>
+
+    );
+}
+
+function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Start />} />
+                <Route path="/principal" element={<PantallaPrincipal />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
-
