@@ -1,8 +1,13 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import React, {useState} from 'react';
+import { Link } from "react-router-dom";
 import '../PantallaPrincipal/pantallaPrincipal.css';
 
 const PantallaPrincipal = () => {
+   const [mostratBusqueda, setmostratBusqueda] = useState(false);
+
+   const toggleBusqueda = () => 
+    setmostratBusqueda(!mostratBusqueda);
+
     return (
         <div className="Pantalla-principal">
             
@@ -14,7 +19,12 @@ const PantallaPrincipal = () => {
                             <Link to="/" className="hover:text-gray-400 transition-all duration-300">Inicio</Link>
                         </li>
                         <li>
-                            <Link to="/buscar" className="hover:text-gray-400 transition-all duration-300">Buscar</Link>
+                            <button onClick={toggleBusqueda}
+                            className='hover:text-gray-400 transition-all duration-300'
+                            >
+                                Buscar 
+    
+                            </button>
                         </li>
                         <li>
                             <Link to="/categorias" className="hover:text-gray-400 transition-all duration-300">Categorías</Link>
@@ -37,16 +47,26 @@ const PantallaPrincipal = () => {
                     </ul>
                 </nav>
             </header>
-
+    
             <main className="container mx-auto px-4 py-8 text-center">
                 <p className="text-lg text-gray-700">Contenido de la pantalla principal</p>
+                    {mostratBusqueda && (
+                        <div className ="container mx-auto px-4 py-4">
+                              <input
+                              type='Text'
+                              placeholder='Ingresa tu busqueda aquí'
+                              className='w-full p-2 boder boder-gray-300 rounded-lg'
+                              />
+                        </div>
+                    )}
             </main>
-
+    
             <footer className="text-center text-white py-4">
                 <p>© 2024 Cronos_Oficial</p>
             </footer>
         </div>
     );
-};
+   };
+
 
 export default PantallaPrincipal;
