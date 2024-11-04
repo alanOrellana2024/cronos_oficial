@@ -12,7 +12,7 @@ return (
 
           <img src={`${process.env.PUBLIC_URL}/logo CRONOS2.2.2.00.png`} className="App-logo" alt="Logo Oficial" />
 
-          <button type="button"   className="btn my-first-btn btn-lg" onClick={() => navigate('/principal')}> Empezar </button>
+          <button type="button" className="bg-[#a93226] text-[#fbfcfc] hover:bg-[#920202] px-6 py-2 text-lg rounded-lg"onClick={() => navigate('/principal')}>Empezar</button>
 
       </header>
 
