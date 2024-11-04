@@ -1,0 +1,13 @@
+.App-bg {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  .Pantalla-principal {
+    background-image: url("/public/bg-starts.png");
+    background-size: cover; /* Ajusta la imagen al tamaño completo del contenedor */
+    background-repeat: no-repeat;
+    background-position: center; /* Centra la imagen */
+    min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    color: #fff; /* Color de texto en blanco para mejor contraste */
+}
