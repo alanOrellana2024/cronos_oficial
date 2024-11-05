@@ -4,7 +4,7 @@ const YearPage = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold">1900</h1>
-      <p>Contenido para el año 1900...</p>
+      <p>ps ya veremos que se pone aquí :) </p>
     </div>
   );
 };
