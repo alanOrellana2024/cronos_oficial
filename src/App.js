@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import PantallaPrincipal from './PantallaPrincipal/pantallaPrincipal';
 import './App.css';
 
 function Start() {
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
 
-return (
-  <div className="App">
-      <header className="App-header">
+    const handleClick = () => {
+        setLoading(true);
+        setTimeout(() => {
+            navigate('/principal');
+        }, 2010); //La duracción de la animación de carga
+    };
 
-          <img src={`${process.env.PUBLIC_URL}/logo CRONOS2.2.2.00.png`} className="App-logo" alt="Logo Oficial" />
+    return (
+        <div className="App">
+            <header className="App-header">
+                <img src={`${process.env.PUBLIC_URL}/logo CRONOS2.2.2.00.png`} className="App-logo" alt="Logo Oficial" />
 
-          <button type="button" className="bg-[#a93226] text-[#fbfcfc] hover:bg-[#920202] px-6 py-2 text-lg rounded-lg"onClick={() => navigate('/principal')}>Empezar</button>
-
-      </header>
-
-   </div>
-
+                {loading ? (
+                    <div className="loading-screen">
+                        <img src={`${process.env.PUBLIC_URL}/loading.gif`} alt="Loading" className="loading-logo" />
+                        <p className="loading-text">Cargando...</p>
+                    </div>
+                ) : (
+                    <button
+                        type="button"
+                        className="bg-[#a93226] text-[#fbfcfc] hover:bg-[#920202] px-6 py-2 text-lg rounded-lg"
+                        onClick={handleClick}
+                    >
+                        Empezar
+                    </button>
+                )}
+            </header>
+        </div>
     );
 }
 
