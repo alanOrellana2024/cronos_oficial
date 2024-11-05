@@ -11,7 +11,7 @@ function Start() {
         setLoading(true);
         setTimeout(() => {
             navigate('/principal');
-        }, 2000); //La duracción de la animación de carga
+        }, 2001); //La duracción de la animación de carga
     };
 
     return (
