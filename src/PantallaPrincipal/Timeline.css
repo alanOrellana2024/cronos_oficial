@@ -1,0 +1,27 @@
+.timeline {
+    @apply flex flex-row overflow-hidden;
+  }
+  
+  .timeline-item {
+    @apply flex flex-row items-center justify-center w-full h-full text-center;
+  }
+  
+  .timeline-item:hover {
+    @apply shadow-lg;
+  }
+  
+  .timeline-item:hover .timeline-content {
+    @apply bg-gray-100;
+  }
+  
+  .timeline-content {
+    @apply bg-black py-2 px-4 w-full rounded-md shadow-md;
+  }
+  
+  .timeline-content h2 {
+    @apply text-xl font-bold;
+  }
+  
+  .timeline-content a {
+    @apply text-gray-400 underline;
+  }
