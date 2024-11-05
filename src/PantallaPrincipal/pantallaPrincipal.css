@@ -4,10 +4,27 @@
   }
 
   .Pantalla-principal {
-    background-image: url("/public/bg-starts.png");
+    background-image: url("/public/bg-video.mp4");
     background-size: cover; /* Ajusta la imagen al tamaño completo del contenedor */
     background-repeat: no-repeat;
     background-position: center; /* Centra la imagen */
     min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
     color: #fff; /* Color de texto en blanco para mejor contraste */
+}
+
+/* Fondo de video sin opacidad ni filtros */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+  z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+/* Ajustes adicionales para mantener el contenido visible */
+.Pantalla-principal {
+  position: relative;
+  overflow: hidden;
 }
