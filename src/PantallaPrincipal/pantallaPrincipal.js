@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from "react-router-dom";
+import Timeline from './Timeline';
 import '../PantallaPrincipal/pantallaPrincipal.css';
 
 const PantallaPrincipal = () => {
@@ -59,6 +60,9 @@ const PantallaPrincipal = () => {
                               />
                         </div>
                     )}
+                    <div className='flex flex-row justify-center' id='timeline-container'>
+                    <Timeline/>
+                     </div>
             </main>
     
             <footer className="text-center text-white py-4">
@@ -66,7 +70,7 @@ const PantallaPrincipal = () => {
             </footer>
         </div>
     );
-   };
+   }   ;
 
 
 export default PantallaPrincipal;
