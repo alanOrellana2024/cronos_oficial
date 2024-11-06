@@ -11,12 +11,7 @@ const PantallaPrincipal = () => {
     return (
         <div className="Pantalla-principal relative min-h-screen flex flex-col justify-between">
             
-            {/* Video de fondo */}
-            <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover" >
-                <source src={`${process.env.PUBLIC_URL}/bg-video.mp4`} type="video/mp4" />
-                Tu navegador no soporta el elemento de video.
-            </video>
-
+        
             {/* Aquí empieza el navbar */}
             <header className="bg-black bg-opacity-60 absolute w-full z-10">
                 <nav className="container mx-auto px-6 py-4 flex justify-center">
