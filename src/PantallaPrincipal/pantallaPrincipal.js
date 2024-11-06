@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import '../PantallaPrincipal/pantallaPrincipal.css';
-import Timeline from './Timeline'; // Asegúrate de que el componente Timeline esté correctamente importado
+import Timeline from './Timeline';
 
 const PantallaPrincipal = () => {
     const [mostrarBusqueda, setMostrarBusqueda] = useState(false);
@@ -9,51 +9,52 @@ const PantallaPrincipal = () => {
     const toggleBusqueda = () => setMostrarBusqueda(!mostrarBusqueda);
 
     return (
-        <div className="Pantalla-principal relative">
+        <div className="Pantalla-principal relative min-h-screen flex flex-col justify-between">
             
-            <video
-                autoPlay
-                loop
-                muted
-                className="background-video"
-            >
+            {/* Video de fondo */}
+            <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover" >
                 <source src={`${process.env.PUBLIC_URL}/bg-video.mp4`} type="video/mp4" />
                 Tu navegador no soporta el elemento de video.
             </video>
 
-            <header className="bg-black bg-opacity-90 shadow-lg relative z-10">
-                <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-                    <h1 className="text-3xl font-semibold text-white">Cronos</h1>
-                    <ul className="flex space-x-8 text-white text-lg font-light">
-                        <li><Link to="/" className="hover:text-gray-400 transition-all duration-300">Inicio</Link></li>
-                        <li><button onClick={toggleBusqueda} className="hover:text-gray-400 transition-all duration-300">Buscar</button></li>
-                        <li><Link to="/categorias" className="hover:text-gray-400 transition-all duration-300">Categorías</Link></li>
-                        <li><Link to="/favoritos" className="hover:text-gray-400 transition-all duration-300">Favoritos</Link></li>
-                        <li><Link to="/listas" className="hover:text-gray-400 transition-all duration-300">Listas</Link></li>
-                        <li><Link to="/como-usar" className="hover:text-gray-400 transition-all duration-300">Cómo Usar</Link></li>
-                        <li><Link to="/quienes-somos" className="hover:text-gray-400 transition-all duration-300">Quiénes Somos</Link></li>
-                        <li><Link to="/contactos" className="hover:text-gray-400 transition-all duration-300">Contactos</Link></li>
-                    </ul>
+            {/* Aquí empieza el navbar */}
+            <header className="bg-black bg-opacity-60 absolute w-full z-10">
+                <nav className="container mx-auto px-6 py-4 flex justify-center">
+                    <div className="text-center">
+                        <h1 className="text-4xl font-semibold text-white font-[Poppins] mb-2">Cronos</h1>
+                        <ul className="flex space-x-6 text-white font-light font-[Poppins] text-lg">
+                            <li><Link to="/" className="hover:text-gray-400 transition duration-300 no-underline">Inicio</Link></li>
+                            <li><button onClick={toggleBusqueda} className="hover:text-gray-400 transition duration-300 no-underline text-white">Buscar</button></li>
+                            <li><Link to="/categorias" className="hover:text-white-400 transition duration-300 no-underline">Categorías</Link></li>
+                            <li><Link to="/favoritos" className="hover:text-white-400 transition duration-300 no-underline">Favoritos</Link></li>
+                            <li><Link to="/listas" className="hover:text-white-400 transition duration-300 no-underline">Listas</Link></li>
+                            <li><Link to="/como-usar" className="hover:text-white-400 transition duration-300 no-underline">Cómo Usar</Link></li>
+                            <li><Link to="/quienes-somos" className="hover:text-white-400 transition duration-300 no-underline">Quiénes Somos</Link></li>
+                            <li><Link to="/contactos" className="hover:text-white-400 transition duration-300 no-underline">Contactos</Link></li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
 
-            <main className="container mx-auto px-4 py-8 text-center relative z-10">
-                <p className="text-lg text-gray-700">Contenido de la pantalla principal</p>
+          
+            <main className="container mx-auto px-4 py-8 text-center relative z-20 mt-32 flex-grow flex flex-col justify-center items-center">
+            
                 {mostrarBusqueda && (
                     <div className="container mx-auto px-4 py-4">
                         <input
                             type="text"
                             placeholder="Ingresa tu búsqueda aquí"
-                            className="w-full p-2 border border-gray-300 rounded-lg font-[Poppins] text-black"
+                            className="w-full p-2 border border-gray-300 rounded-lg font-[Poppins] text-white bg-transparent placeholder-white"
                         />
                     </div>
                 )}
-                <div className='flex flex-row justify-center' id='timeline-container'>
+                <div className='flex justify-center mt-12' id='timeline-container'>
                     <Timeline/>
                 </div>
             </main>
 
-            <footer className="text-center text-white py-4 relative z-10">
+          
+            <footer className="bg-black bg-opacity-80 text-center text-white py-4 relative z-20">
                 <p>© 2024 Cronos_Oficial</p>
             </footer>
         </div>
