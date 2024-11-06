@@ -33,17 +33,8 @@
   }
 }
 
-.my-first-btn {
-  background-color: #a93226; /* Cambia el color del boton */
-  color: #fbfcfc ; /* Cambia el color del texto del boton*/
-}
-
-.my-first-btn:hover {
-  background-color: #920202; /* Efecto de cambio de color del boton al pasar el cursor por encima*/
-}
-
 .App-header {
-  background-image: url('../public/estrellitas\ fodno.gif');
+  background-image: url('../public/spaceBg.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

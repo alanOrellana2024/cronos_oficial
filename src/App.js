@@ -27,7 +27,7 @@ function Start() {
                 ) : (
                     <button
                         type="button"
-                        className="bg-[#a93226] text-[#fbfcfc] hover:bg-[#920202] px-6 py-2 text-lg rounded-lg"
+                        className="bg-[#7A1CAC] text-[#FFFBF5] hover:bg-[#2E073F] px-6 py-2 text-lg rounded-lg"
                         onClick={handleClick}
                     >
                         Empezar
