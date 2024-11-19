@@ -1,0 +1,15 @@
+.CateSeleccion{
+    text-align: center;
+    background-color: #1b1d42;
+    margin: 13% 35% 0;
+    font-size: 40px;
+    text-transform: capitalize;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px purple;
+}
+.cartaSeleccion{
+    border: solid white 2px;
+    padding: 10%;
+    margin: 3% 70% 0 5%;
+    background: white;
+}
