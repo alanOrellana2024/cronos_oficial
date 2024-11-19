@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import PantallaPrincipal from './PantallaPrincipal/pantallaPrincipal';
+import Categorias from './PantallaPrincipal/categorias';
+import Arte from './PantallaPrincipal/categorias/arte';
+import Politica from './PantallaPrincipal/categorias/politica';
+import Historia from './PantallaPrincipal/categorias/historia';
+import Descu from './PantallaPrincipal/categorias/descu';
+import Literat from './PantallaPrincipal/categorias/literat';
+
 import './App.css';
+
 
 function Start() {
     const navigate = useNavigate();
@@ -44,6 +52,12 @@ function App() {
             <Routes>
                 <Route path="/" element={<Start />} />
                 <Route path="/principal" element={<PantallaPrincipal />} />
+                <Route path="/categorias" element={<Categorias />} /> 
+                <Route path="/arte" element={<Arte />} /> 
+                <Route path="/politica" element={<Politica />} />
+                <Route path="/historia" element={<Historia />} />
+                <Route path="/descu" element={<Descu />} />
+                <Route path="/literat" element={<Literat />} />
             </Routes>
         </Router>
     );
