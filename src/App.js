@@ -7,8 +7,7 @@ import Politica from './PantallaPrincipal/categorias/politica';
 import Historia from './PantallaPrincipal/categorias/historia';
 import Descu from './PantallaPrincipal/categorias/descu';
 import Literat from './PantallaPrincipal/categorias/literat';
-import EventDetail from './components/EventDetail';
-import YearDetail from './PantallaPrincipal/YearDetail'; // Importamos el componente
+import EventDetail from './components/EventDetail'; 
 
 import './App.css';
 
@@ -67,9 +66,6 @@ function App() {
 
                 {/* Detalle de eventos */}
                 <Route path="/event/:id" element={<EventDetail />} />
-
-                {/* Detalle de años */}
-                <Route path="/year/:year" element={<YearDetail />} />
             </Routes>
         </Router>
     );
