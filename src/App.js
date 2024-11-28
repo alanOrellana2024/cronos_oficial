@@ -7,6 +7,9 @@ import Politica from './PantallaPrincipal/categorias/politica';
 import Historia from './PantallaPrincipal/categorias/historia';
 import Descu from './PantallaPrincipal/categorias/descu';
 import Literat from './PantallaPrincipal/categorias/literat';
+import QuienesSomos from './QuienesSomos/QuienesSomos';
+
+
 
 import './App.css';
 
@@ -58,6 +61,7 @@ function App() {
                 <Route path="/historia" element={<Historia />} />
                 <Route path="/descu" element={<Descu />} />
                 <Route path="/literat" element={<Literat />} />
+                <Route path= "/QuienesSomos" element={<QuienesSomos/>} />
             </Routes>
         </Router>
     );

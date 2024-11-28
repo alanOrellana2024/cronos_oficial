@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import '../PantallaPrincipal/pantallaPrincipal.css';
 import Timeline from './Timeline';
+import QuienesSomos from '../QuienesSomos/QuienesSomos';
 
 const PantallaPrincipal = () => {
     const [mostrarBusqueda, setMostrarBusqueda] = useState(false);
@@ -23,9 +24,7 @@ const PantallaPrincipal = () => {
                             <li><Link to="/categorias" className="hover:text-white-400 transition duration-300 no-underline">Categorías</Link></li>
                             <li><Link to="/favoritos" className="hover:text-white-400 transition duration-300 no-underline">Favoritos</Link></li>
                             <li><Link to="/listas" className="hover:text-white-400 transition duration-300 no-underline">Listas</Link></li>
-                            <li><Link to="/como-usar" className="hover:text-white-400 transition duration-300 no-underline">Cómo Usar</Link></li>
-                            <li><Link to="/quienes-somos" className="hover:text-white-400 transition duration-300 no-underline">Quiénes Somos</Link></li>
-                            <li><Link to="/contactos" className="hover:text-white-400 transition duration-300 no-underline">Contactos</Link></li>
+                            <li><Link to="/QuienesSomos" className="hover:text-white-400 transition duration-300 no-underline">Quiénes Somos</Link></li>   
                         </ul>
                     </div>
                 </nav>
