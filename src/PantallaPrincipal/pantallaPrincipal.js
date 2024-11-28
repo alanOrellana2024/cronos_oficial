@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Asegúrate de importar Link
-import api from '../api/api'; // Importamos la configuración de la API
-import EventList from '../components/EventList'; // Componente para mostrar la lista de eventos
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import eventosHistoricos from '../data/eventosHistoricos';
+import EventList from '../components/EventList';
 import Timeline from './Timeline';
 import './pantallaPrincipal.css'; // Importamos el CSS del fondo
 
@@ -13,31 +13,20 @@ const PantallaPrincipal = () => {
 
   const toggleBusqueda = () => setMostrarBusqueda(!mostrarBusqueda);
 
-  useEffect(() => {
-    setLoading(true);
-    api.get('/api/events')
-      .then((response) => {
-        setEvents(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching events:', error);
-        setLoading(false);
-      });
-  }, []);
-
   const handleSearch = () => {
     if (!busqueda.trim()) return; // Evita búsquedas vacías
+
     setLoading(true);
-    api.get(`/api/events?search=${busqueda}`)
-      .then((response) => {
-        setEvents(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error searching events:', error);
-        setLoading(false);
-      });
+    // Filtramos los eventos por título, categoría o año
+    const resultadosFiltrados = eventosHistoricos.filter((evento) => {
+      return (
+        evento.title.toLowerCase().includes(busqueda.toLowerCase()) ||
+        evento.category.toLowerCase().includes(busqueda.toLowerCase()) ||
+        evento.year.toString().includes(busqueda)
+      );
+    });
+    setEvents(resultadosFiltrados);
+    setLoading(false);
   };
 
   return (
@@ -52,7 +41,6 @@ const PantallaPrincipal = () => {
               <li><Link to="/categorias" className="hover:text-gray-400 transition duration-300 no-underline">Categorías</Link></li>
               <li><Link to="/quienes-somos" className="hover:text-gray-400 transition duration-300 no-underline">Quiénes Somos</Link></li>
               <li><Link to="/contactos" className="hover:text-gray-400 transition duration-300 no-underline">Contactos</Link></li>
-              
             </ul>
           </div>
         </nav>
@@ -88,14 +76,10 @@ const PantallaPrincipal = () => {
         </div>
       </main>
 
-
-      <br></br>
-                <footer className="bg-black bg-opacity-80 text-center text-white py-4 relative z-20">
-                    <p>© 2024 Cronos_Oficial</p>
-                </footer>
+      <footer className="bg-black bg-opacity-80 text-center text-white py-4 relative z-20">
+        <p>© 2024 Cronos_Oficial</p>
+      </footer>
     </div>
-
-
   );
 };
 
