@@ -4,7 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const EventDetail = () => {
-  const { id } = useParams(); // Obtiene el ID del evento desde la URL
+  const { id } = useParams(); 
   const [event, setEvent] = useState(null);
 
   useEffect(() => {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import eventosHistoricos from '../data/eventosHistoricos';
 import EventList from '../components/EventList';
 import Timeline from './Timeline';
-import './pantallaPrincipal.css'; // Importamos el CSS del fondo
+import './pantallaPrincipal.css'; 
 
 const PantallaPrincipal = () => {
   const [mostrarBusqueda, setMostrarBusqueda] = useState(false);
@@ -14,10 +14,10 @@ const PantallaPrincipal = () => {
   const toggleBusqueda = () => setMostrarBusqueda(!mostrarBusqueda);
 
   const handleSearch = () => {
-    if (!busqueda.trim()) return; // Evita búsquedas vacías
+    if (!busqueda.trim()) return; 
 
     setLoading(true);
-    // Filtramos los eventos por título, categoría o año
+   
     const resultadosFiltrados = eventosHistoricos.filter((evento) => {
       return (
         evento.title.toLowerCase().includes(busqueda.toLowerCase()) ||

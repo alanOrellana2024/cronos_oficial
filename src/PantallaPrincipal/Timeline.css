@@ -1,27 +1,57 @@
-.timeline {
-    @apply flex flex-row overflow-hidden;
-  }
-  
-  .timeline-item {
-    @apply flex flex-row items-center justify-center w-full h-full text-center;
-  }
-  
-  .timeline-item:hover {
-    @apply shadow-lg;
-  }
-  
-  .timeline-item:hover .timeline-content {
-    @apply bg-gray-100;
-  }
-  
-  .timeline-content {
-    @apply bg-black py-2 px-4 w-full rounded-md shadow-md;
-  }
-  
-  .timeline-content h2 {
-    @apply text-xl font-bold;
-  }
-  
-  .timeline-content a {
-    @apply text-gray-400 underline;
-  }
+/* General container */
+.timeline-container {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: auto; /* Permite scroll horizontal */
+  white-space: nowrap; /* Evita que los años se apilen */
+  padding: 0 15px; /* Espacio para los bordes inicial y final */
+}
+
+/* Línea central */
+.timeline-line {
+  height: 5px;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+/* Cada elemento de la línea de tiempo */
+.timeline-item {
+  position: relative;
+  z-index: 2;
+  display: inline-block; /* Asegura que los elementos estén en línea */
+  padding: 0 20px; /* Espaciado entre cada año */
+}
+
+/* Años */
+.timeline-year {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Enlace "Ver más" */
+.timeline-link {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+.timeline-link:hover {
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+/* Ajustes para asegurar la visibilidad del primer y último año */
+.timeline-container::before,
+.timeline-container::after {
+  content: '';
+  display: inline-block;
+  width: 15px; /* Espacio adicional para los bordes */
+}
+
+
