@@ -20,9 +20,9 @@ const QuienesSomos = () => {
     equipo: [
       { nombre: 'Alan Orellana', imagen: Alan},
       { nombre: 'Geisel Ortiz',  imagen: GeiselOrtiz  },
-      { nombre: 'Marina Gonzales',imagen: Marina },
+      { nombre: 'Marina González',imagen: Marina },
       { nombre: 'Camila Jimenez',imagen: Camila},
-      { nombre: 'Josue Flores',imagen: josue },
+      { nombre: 'Josué Flores',imagen: josue },
     ]
   });
 
@@ -64,7 +64,7 @@ const QuienesSomos = () => {
  {/* Nuestro Equipo */}
  <section className="w-full mb-12">
           <h2 className="text-8x1 font-semibold text-white-800">Nuestro Equipo</h2>
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">//funciona como contenedor 
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {contenido.equipo.map((miembro, index) => (
               <div key={index} className="p-6 border border-gray-300 rounded-lg shadow-md">
                 {/* Imagen del miembro */}
