@@ -45,8 +45,7 @@
                             <ul className="flex space-x-6 text-white font-light font-[Poppins] text-lg">
                                 <li><Link to="/principal" className="hover:text-gray-400 transition duration-300 no-underline">Inicio</Link></li>
                                 <li><Link to="/categorias" className="hover:text-white-400 transition duration-300 no-underline">Categorías</Link></li>
-                                <li><Link to="/quienes-somos" className="hover:text-white-400 transition duration-300 no-underline">Quiénes Somos</Link></li>
-                                <li><Link to="/contactos" className="hover:text-white-400 transition duration-300 no-underline">Contactos</Link></li>
+
                             </ul>
                         </div>
                     </nav>
