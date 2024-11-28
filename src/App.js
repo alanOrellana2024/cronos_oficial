@@ -7,12 +7,8 @@ import Politica from './PantallaPrincipal/categorias/politica';
 import Historia from './PantallaPrincipal/categorias/historia';
 import Descu from './PantallaPrincipal/categorias/descu';
 import Literat from './PantallaPrincipal/categorias/literat';
-import QuienesSomos from './QuienesSomos/QuienesSomos';
-
-
 
 import './App.css';
-
 
 function Start() {
     const navigate = useNavigate();
@@ -22,7 +18,7 @@ function Start() {
         setLoading(true);
         setTimeout(() => {
             navigate('/principal');
-        }, 2010); //La duracción de la animación de carga
+        }, 2010); // Duración de la animación de carga
     };
 
     return (
@@ -53,15 +49,19 @@ function App() {
     return (
         <Router>
             <Routes>
+                {/* Pantalla de inicio */}
                 <Route path="/" element={<Start />} />
+                
+                {/* Pantalla principal */}
                 <Route path="/principal" element={<PantallaPrincipal />} />
-                <Route path="/categorias" element={<Categorias />} /> 
-                <Route path="/arte" element={<Arte />} /> 
+                
+                {/* Categorías */}
+                <Route path="/categorias" element={<Categorias />} />
+                <Route path="/arte" element={<Arte />} />
                 <Route path="/politica" element={<Politica />} />
                 <Route path="/historia" element={<Historia />} />
                 <Route path="/descu" element={<Descu />} />
                 <Route path="/literat" element={<Literat />} />
-                <Route path= "/QuienesSomos" element={<QuienesSomos/>} />
             </Routes>
         </Router>
     );
