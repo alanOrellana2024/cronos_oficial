@@ -64,7 +64,7 @@ const QuienesSomos = () => {
  {/* Nuestro Equipo */}
  <section className="w-full mb-12">
           <h2 className="text-8x1 font-semibold text-white-800">Nuestro Equipo</h2>
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">//funciona como contenedor 
             {contenido.equipo.map((miembro, index) => (
               <div key={index} className="p-6 border border-gray-300 rounded-lg shadow-md">
                 {/* Imagen del miembro */}
