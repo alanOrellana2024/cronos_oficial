@@ -6,7 +6,6 @@ const YearDetail = () => {
   // Capturamos el año desde los parámetros de la URL
   const { year } = useParams();
 
-  // Datos de ejemplo para los resúmenes
   const yearData = {
     1900: {
       summary: "Inicio del siglo XX: avances tecnológicos y el nacimiento del cine.",

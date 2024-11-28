@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Timeline.css"; // Asegúrate de que esté actualizado
+import "./Timeline.css"; 
+import "./YearDetail.js"
 
 const Timeline = () => {
   const dates = [
