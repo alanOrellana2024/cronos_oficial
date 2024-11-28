@@ -43,11 +43,8 @@
                         <div className="text-center">
                             <h1 className="text-4xl font-semibold text-white font-[Poppins] mb-2">Cronos</h1>
                             <ul className="flex space-x-6 text-white font-light font-[Poppins] text-lg">
-                                <li><Link to="/" className="hover:text-gray-400 transition duration-300 no-underline">Inicio</Link></li>
+                                <li><Link to="/principal" className="hover:text-gray-400 transition duration-300 no-underline">Inicio</Link></li>
                                 <li><Link to="/categorias" className="hover:text-white-400 transition duration-300 no-underline">Categorías</Link></li>
-                                <li><Link to="/favoritos" className="hover:text-white-400 transition duration-300 no-underline">Favoritos</Link></li>
-                                <li><Link to="/listas" className="hover:text-white-400 transition duration-300 no-underline">Listas</Link></li>
-                                <li><Link to="/como-usar" className="hover:text-white-400 transition duration-300 no-underline">Cómo Usar</Link></li>
                                 <li><Link to="/quienes-somos" className="hover:text-white-400 transition duration-300 no-underline">Quiénes Somos</Link></li>
                                 <li><Link to="/contactos" className="hover:text-white-400 transition duration-300 no-underline">Contactos</Link></li>
                             </ul>
